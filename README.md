@@ -6,25 +6,13 @@ Package provides management command `cleanup_unused_media` for Django applicatio
 
 You can remove all not used media files (files without references from any Django model with `FileField` or `ImageField` fields or their inheritances).
 
-<!-- # Installation -->
+## Installation
 
-<!-- 1.  Install ``django-unused-media-cleaner``: -->
-<!--     ``` -->
-<!--     pip install django-unused-media-cleaner -->
-<!--     ``` -->
+```bash
+pip install django-unused-media-cleaner
+Add *unused_media_cleaner* to INSTALLED_APPS.
+```
 
-<!--     Python `2.7`, `3.6`, `3.7`, `pypy` are tested with tox. -->
-    
-<!--     Django `1.8`, `1.9`, `1.10`, `1.11`, `2.0`, `2.1`, `2.2`, `3.0` are tested with tox. -->
-
-<!-- 2.  Add ``django-unused-media-cleaner`` to ``INSTALLED_APPS``: -->
-<!--     ```python -->
-<!--     INSTALLED_APPS = ( -->
-<!--         ... -->
-<!--         'unused_media_cleaner', -->
-<!--         ... -->
-<!--     ) -->
-<!--     ``` -->
 
 # Usage
 
@@ -84,24 +72,15 @@ Verbosity level.
 - 2 - verbose output (list individual files)
 
 
-# Tests
-At first make sure that you are in virtualenv if you use it.
+## Testing (for developers)
 
-Install all dependencies:
-```
-make setup
-```
-To run tests:
-```
-make test
-```
-To run static analyser:
-```
-make flake8
+```bash
+uv sync --extra test
+uv run pytest
 ```
 
 # License
-[MIT licence](./LICENSE)
+MIT
 
 <!-- [build-status-image]: https://api.travis-ci.org/akolpakov/django-unused-media.svg?branch=master -->
 <!-- [travis]: http://travis-ci.org/akolpakov/django-unused-media?branch=master -->

@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include unused_media_cleaner *.py
+recursive-include tests *.py
