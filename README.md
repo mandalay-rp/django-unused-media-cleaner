@@ -1,6 +1,9 @@
 # Delete unused media files from Django project
 
-<!-- [![build-status-image]][travis] [![PyPI][pypi-version-image]][pypi-version] -->
+![](https://img.shields.io/pypi/v/django-unused-media-cleaner.svg)
+![](https://img.shields.io/pypi/pyversions/django-unused-media-cleaner.svg)
+![](https://img.shields.io/badge/django-3.2%20%7C%204.2%20%7C%205.0%20%7C%205.1-blue)
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Package provides management command `cleanup_unused_media` for Django applications.
 
@@ -10,8 +13,8 @@ You can remove all not used media files (files without references from any Djang
 
 ```bash
 pip install django-unused-media-cleaner
-Add *unused_media_cleaner* to INSTALLED_APPS.
 ```
+Add **unused_media_cleaner** to INSTALLED_APPS.
 
 
 # Usage
