@@ -1,5 +1,5 @@
 import pytest
-from django.apps import apps
+
 from unused_media_cleaner.utils import get_file_fields
 
 

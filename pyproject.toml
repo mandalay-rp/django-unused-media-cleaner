@@ -91,6 +91,15 @@ select = [
 "**/migrations/*.py" = ["E501", "RUF012"]
 
 [tool.ruff.lint.isort]
-# Настройка порядка импортов, как в isort, с выделением Django
 known-first-party = ["unused_media_cleaner"]
-section-order = ["future", "standard-library", "third-party", "django", "first-party", "local-folder"]
+section-order = [
+    "future",
+    "standard-library",
+    "django",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+django = ["django"]

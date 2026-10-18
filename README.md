@@ -2,7 +2,7 @@
 
 <!-- [![build-status-image]][travis] [![PyPI][pypi-version-image]][pypi-version] -->
 
-Package provides management command `cleanup_unused_media` for Django applications. 
+Package provides management command `cleanup_unused_media` for Django applications.
 
 You can remove all not used media files (files without references from any Django model with `FileField` or `ImageField` fields or their inheritances).
 
@@ -33,7 +33,7 @@ Non interactive mode. Command will remove files without any confirmation from th
 
 #### `-e`, `--exclude`
 
-To avoid operating on particular files you can use exclude option. 
+To avoid operating on particular files you can use exclude option.
 - --exclude=PATTERN or -e=PATTERN
 - The pattern is specified similarly to the pattern for the --exclude argument in the rsync utility.
 - *`*` as any symbol is supported.*
@@ -54,7 +54,7 @@ Also you can exclude entire folder or some files in that folder (path should be 
 
 *Default = 60 (one minute)*
 
-Minimum file age to consider for cleanup. All files younger this age will be skipped. 
+Minimum file age to consider for cleanup. All files younger this age will be skipped.
 
 #### `--remove-empty-dirs`
 
@@ -66,7 +66,7 @@ Dry run without any affect on your data
 
 #### `--verbosity {0,1,2}`, `-v {0,1,2}`
 
-Verbosity level. 
+Verbosity level.
 - 0 - silent
 - 1 - normal output (default)
 - 2 - verbose output (list individual files)
@@ -77,6 +77,14 @@ Verbosity level.
 ```bash
 uv sync --extra test
 uv run pytest
+```
+
+## Cheks
+```bash
+uv run ruff check .
+uv run ruff check --fix .
+uv run ruff format .
+uv run ruff format --check .
 ```
 
 # License

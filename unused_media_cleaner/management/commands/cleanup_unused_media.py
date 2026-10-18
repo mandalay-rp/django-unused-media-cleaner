@@ -1,8 +1,9 @@
 import os
 
-import six.moves
 from django.conf import settings
 from django.core.management.base import BaseCommand
+
+import six.moves
 
 from unused_media_cleaner.cleanup import get_unused_media
 from unused_media_cleaner.remove import remove_empty_dirs

@@ -1,8 +1,6 @@
-import os
-
-# import re
-import time
 import fnmatch
+import os
+import time
 
 from django.conf import settings
 from django.core.validators import EMPTY_VALUES
@@ -20,10 +18,10 @@ def get_used_media() -> set:
 
     for field in get_file_fields():
         is_null = {
-            f'{field.name}__isnull': True,
+            f"{field.name}__isnull": True,
         }
         is_empty = {
-            field.name: '',
+            field.name: "",
         }
 
         storage = field.storage
@@ -49,9 +47,9 @@ def get_all_media(
     EXCLUDED = exclude or []
 
     # Паттерн со слешем на конце — исключает только каталоги
-    DIR_ONLY = [p[:-1] for p in EXCLUDED if p.endswith('/')]
+    DIR_ONLY = [p[:-1] for p in EXCLUDED if p.endswith("/")]
     # Остальные паттерны — исключают и файлы, и каталоги (как в rsync)
-    BOTH = [p for p in EXCLUDED if not p.endswith('/')]
+    BOTH = [p for p in EXCLUDED if not p.endswith("/")]
 
     def excluded(name, patterns):
         return any(fnmatch.fnmatchcase(name, p) for p in patterns)

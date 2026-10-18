@@ -1,6 +1,4 @@
-import os
-import pytest
-from unused_media_cleaner.remove import remove_media, remove_empty_dirs
+from unused_media_cleaner.remove import remove_empty_dirs, remove_media
 
 
 def test_remove_media_deletes_file(tmp_path, settings):

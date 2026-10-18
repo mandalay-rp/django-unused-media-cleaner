@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 from django.apps import apps
 from django.db import models
 
 
 def get_file_fields():
     """
-        Get all fields which are inherited from FileField
+    Get all fields which are inherited from FileField
     """
 
     # get models

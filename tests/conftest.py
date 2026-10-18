@@ -1,7 +1,8 @@
 import os
 
-import pytest
 from django.core.files.uploadedfile import SimpleUploadedFile
+
+import pytest
 
 from tests.testapp.models import MediaModel
 
