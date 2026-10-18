@@ -1,30 +1,30 @@
 # Delete unused media files from Django project
 
-[![build-status-image]][travis] [![PyPI][pypi-version-image]][pypi-version]
+<!-- [![build-status-image]][travis] [![PyPI][pypi-version-image]][pypi-version] -->
 
 Package provides management command `cleanup_unused_media` for Django applications. 
 
 You can remove all not used media files (files without references from any Django model with `FileField` or `ImageField` fields or their inheritances).
 
-# Installation
+<!-- # Installation -->
 
-1.  Install ``django-unused-media``:
-    ```
-    pip install django-unused-media
-    ```
+<!-- 1.  Install ``django-unused-media-cleaner``: -->
+<!--     ``` -->
+<!--     pip install django-unused-media-cleaner -->
+<!--     ``` -->
 
-    Python `2.7`, `3.6`, `3.7`, `pypy` are tested with tox.
+<!--     Python `2.7`, `3.6`, `3.7`, `pypy` are tested with tox. -->
     
-    Django `1.8`, `1.9`, `1.10`, `1.11`, `2.0`, `2.1`, `2.2`, `3.0` are tested with tox.
+<!--     Django `1.8`, `1.9`, `1.10`, `1.11`, `2.0`, `2.1`, `2.2`, `3.0` are tested with tox. -->
 
-2.  Add ``django-unused-media`` to ``INSTALLED_APPS``:
-    ```python
-    INSTALLED_APPS = (
-        ...
-        'django_unused_media',
-        ...
-    )
-    ```
+<!-- 2.  Add ``django-unused-media-cleaner`` to ``INSTALLED_APPS``: -->
+<!--     ```python -->
+<!--     INSTALLED_APPS = ( -->
+<!--         ... -->
+<!--         'unused_media_cleaner', -->
+<!--         ... -->
+<!--     ) -->
+<!--     ``` -->
 
 # Usage
 
@@ -46,8 +46,11 @@ Non interactive mode. Command will remove files without any confirmation from th
 #### `-e`, `--exclude`
 
 To avoid operating on particular files you can use exclude option. 
+- --exclude=PATTERN or -e=PATTERN
+- The pattern is specified similarly to the pattern for the --exclude argument in the rsync utility.
 - *`*` as any symbol is supported.*
 - *Can use multiple options in one command.*
+- *Can be used to exclude certain directories from processing. Example: --exclude='somedir/'*
 
 For example, to keep `.gitignore` and `*.png` files you can use:
 ```
@@ -100,7 +103,7 @@ make flake8
 # License
 [MIT licence](./LICENSE)
 
-[build-status-image]: https://api.travis-ci.org/akolpakov/django-unused-media.svg?branch=master
-[travis]: http://travis-ci.org/akolpakov/django-unused-media?branch=master
-[pypi-version-image]: https://img.shields.io/pypi/v/django-unused-media.svg
-[pypi-version]: https://pypi.python.org/pypi/django-unused-media
+<!-- [build-status-image]: https://api.travis-ci.org/akolpakov/django-unused-media.svg?branch=master -->
+<!-- [travis]: http://travis-ci.org/akolpakov/django-unused-media?branch=master -->
+<!-- [pypi-version-image]: https://img.shields.io/pypi/v/django-unused-media.svg -->
+<!-- [pypi-version]: https://pypi.python.org/pypi/django-unused-media -->

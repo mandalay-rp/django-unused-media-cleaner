@@ -1,21 +1,19 @@
-# -*- coding: utf-8 -*-
-
 import os
 
 from django.conf import settings
 
 
-def remove_media(files):
+def remove_media(files: set) -> None:
     """
-        Delete file from media dir
+    Delete file from media dir
     """
     for filename in files:
         os.remove(os.path.join(settings.MEDIA_ROOT, filename))
 
 
-def remove_empty_dirs(path=None):
+def remove_empty_dirs(path: str | None = None) -> bool:
     """
-        Recursively delete empty directories; return True if everything was deleted.
+    Recursively delete empty directories; return True if everything was deleted.
     """
 
     if not path:
